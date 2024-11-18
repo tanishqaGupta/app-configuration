@@ -1,0 +1,37 @@
+#Defined the following chart values to override the charts the default values defined the /versions.yaml file:
+#charts:
+#  sip:
+#    version:
+#  storefront:
+#    version:
+#  solr:
+#    version:
+#  routes:
+#    version:
+
+charts:
+  sip:
+    version: 1.4.7
+  storefront:
+    version: 0.3.1-april
+  solr:
+    version: 2.1.14+july
+
+#Define the version values on the desired app to override the default version defined in the chart:
+#apps:
+#  sip:
+#    version:
+
+apps:
+  sip:
+    version: integration-china
+    profiles:
+      operations:
+        version: integration-china-20240911-0
+    utils:
+      image:
+        version: integration-china-20240124-0
+  membership:
+    version: integration-china-20240503-0
+  payment:
+    version: integration
